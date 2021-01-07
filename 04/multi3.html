@@ -9,5 +9,19 @@
 </head>
 <body>
 	<div id="result"></div>
+	<script>
+		let number = prompt("숫자를 입력해주세요.")
+		let display = document.querySelector("#result")
+
+		if(number != null) {
+			if(number % 3 == 0) {
+				display.innerHTML = number + "은 3의 배수입니다."
+			} else {
+				display.innerHTML = number + "은 3의 배수가 아닙니다."
+			}
+		} else {
+			alert("입력이 취소되었습니다.")
+		}
+	</script>
 </body>
 </html>
