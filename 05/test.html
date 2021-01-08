@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 익명함수
+        let add = function(a, b) {
+            return a + b
+        }
+        document.write(add(3, 5), "<br>")
+
+        // 즉시 실행 함수 1
+        let result = (function() {
+            return 10 + 20
+        } ())
+        document.write(result, "<br>")
+
+        // 즉시 실행 함수 2
+        let other = (function(a, b) {
+            return a + b
+        } (20, 40))
+        document.write(other, "<br>")
+
+        // 화살표 표기법 1
+        let hi = () => "안녕하세요?"
+        document.write(hi(), "<br>")
+
+        // 화살표 표기법 2
+        let greet = name => `${name}님, 안녕하세요?`
+        document.write(greet("강상우"), "<br>")
+
+        // 화살표 표기법 3
+        let arrow = (a, b) => a + b
+        document.write(arrow(1, 2), "<br>")
+
+        // 화살표 표기법 3
+        let rarrow = (a, b) => { return a + b }
+        document.write(rarrow(10, 20), "<br>")
+    </script>
+</body>
+</html>
