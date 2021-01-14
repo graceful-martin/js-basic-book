@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numbers1 = ["one", "two", "three", "four"] // 리터럴을 사용한 배열
+        var numbers2 = new Array("one", "two", "three", "four") // Array 객체를 사용한 배열
+
+        for(var i = 0; i < numbers1.length; ++i) {
+            document.write(numbers1[i], "<br>")
+        }
+
+        // 배열 연결하기
+        console.log(numbers1.concat(numbers2))
+
+        // 배열 요소 연결
+        console.log(numbers1.join("-"))
+
+        // 배열 요소 뒤쪽에 추가
+        console.log(numbers1.push("five", "six"))
+        console.log(numbers1)
+
+        // 배열 요소 앞쪽에 추가
+        console.log(numbers1.unshift("zero"))
+        console.log(numbers1)
+
+        // 배열 요소 뒤쪽부터 삭제
+        numbers1.pop()
+        console.log(numbers1)
+
+        // 배열 요소 앞부터 삭제
+        numbers1.shift()
+        console.log(numbers1)
+
+        // 배열을 인수부터 끝까지 삭제 (배열 영향 줌)
+        numbers1.splice(2)
+        console.log(numbers1)
+
+        // 배열을 삭제하면서 추가 (배열 영향 줌)
+        numbers1.splice(2, 1, "three", "four")
+        console.log(numbers1)
+
+        // 원하는 위치의 요소들 추출 (배열 영향 안줌)
+        console.log(numbers1.slice(2))
+    </script>
+</body>
+</html>
