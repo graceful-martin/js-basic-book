@@ -12,12 +12,40 @@
 		<h1>참가 신청</h1>
 		<form action="">
 			<input type="text" id="userName" placeholder="이름" required>
-			<button>신청</button>
+			<button onclick="return false;">신청</button>
 		</form>
 		<hr>
 		<div id="nameList"></div>
 	</div>
 	
-	<script src="js/register-create.js"></script>
+	<script>
+		var btn = document.getElementsByTagName("button")
+		btn[0].addEventListener("click", function() {
+			var name = document.querySelector("#userName")
+			if(name.value == "") {
+				return false;
+			}
+
+			var newP = document.createElement("p")
+			var newText = document.createTextNode(name.value)
+
+			var newS = document.createElement("span")
+			newS.appendChild(document.createTextNode("X"))
+			newS.setAttribute("class", "del")
+			newS.addEventListener("click", remove)
+			
+			newP.appendChild(newText)
+			newP.appendChild(newS)
+
+			var list = document.querySelector("#nameList")
+			list.insertBefore(newP, list.childNodes[0])
+
+			name.value = ""
+		})
+
+		function remove() {
+			this.parentNode.parentNode.removeChild(this.parentNode)
+		}
+	</script>
 </body>
 </html>

@@ -7,4 +7,6 @@ function newRegister() {
 	var nameList = document.querySelector("#nameList");  
 	nameList.appendChild(newP); // p 요소를 #nameList의 자식 요소로 만들기
 	userName.value = "";  // 텍스트 필드 지우기
+
+	
 }			
