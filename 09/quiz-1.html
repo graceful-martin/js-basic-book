@@ -28,6 +28,22 @@
         <input type="text" id="total" name="total" class="price" readonly>
       </fieldset>
 		</form>	
-	</div>
+  </div>
+  <script>
+    var checks = document.querySelectorAll(".checkbx");
+    var total = document.querySelector(".price");
+    var sum = 0;
+    total.value = "0원";
+    Array.prototype.forEach.call(checks, (element) => {
+      element.addEventListener("click", () => {
+        if(element.checked == true) {
+          sum += parseInt(element.value);
+        } else {
+          sum -= parseInt(element.value);
+        }
+        total.value = sum + "원";
+      })
+    });
+  </script>
 </body>
 </html>

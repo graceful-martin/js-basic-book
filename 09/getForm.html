@@ -48,7 +48,14 @@
 			</fieldset>
 		</form>
 	</div>
-
-	<script src="js/getForm.js"></script>
+	<script>
+		var selectMenu = document.testForm.major;
+		console.log(selectMenu);
+		function displaySelect() {
+			var selectedText = selectMenu.options[selectMenu.selectedIndex].innerText;
+			alert("[" + selectedText + "]를 선택하였습니다.")
+		}
+	</script>
+	<!-- <script src="js/getForm.js"></script> -->
 </body>
 </html>
